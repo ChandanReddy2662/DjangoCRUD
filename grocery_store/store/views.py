@@ -7,6 +7,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User as authUser
 from django.contrib.auth import authenticate, login as userLogin, logout as userLogout, get_user
 import json
+from itertools import permutations
 
 # Create your views here.
 def onload(req):
@@ -20,7 +21,6 @@ def signup(req):
         print(form.data)
         if form.is_valid():
             user = authUser.objects.create_user(username=form.data.get('username'), password=form.data.get('password'),email=form.data.get('email'))
-    
             user.save()
             form.save()
             return JsonResponse({"saved": "true"})
@@ -62,6 +62,7 @@ def products(req):
             return JsonResponse({"saved": "false", "errors": "Invalid form data"}, status=400)
     else:
         return JsonResponse(list(Product.objects.all().values()), safe=False)
+    
 @csrf_exempt
 def addToCart(req):
     if req.method == 'POST':
