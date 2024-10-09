@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - E-commerce</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="cart.html">Cart</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Cart Section -->
+     <main>
+    <div class="container">
+        <h1>Your Cart</h1>
+        <table class="cart-table">
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Subtotal</th>
+                <th>Actions</th>
+            </tr>
+            <!-- Repeat for each cart item -->
+            <tr>
+                <td>Product 1</td>
+                <td><input type="number" value="1" min="1"></td>
+                <td>$29.99</td>
+                <td>$29.99</td>
+                <td><button>Remove</button></td>
+            </tr>
+            <tr>
+                <td>Product 2</td>
+                <td><input type="number" value="1" min="1"></td>
+                <td>$39.99</td>
+                <td>$39.99</td>
+                <td><button>Remove</button></td>
+            </tr>
+            <!-- Add more cart items as needed -->
+        </table>
+        <div class="cart-total">
+            <h3>Total: $69.98</h3>
+            <button>Proceed to Checkout</button>
+        </div>
+    </div>
+</main>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 E-commerce. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

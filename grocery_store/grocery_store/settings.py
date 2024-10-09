@@ -57,13 +57,13 @@ MIDDLEWARE = [
 CORS_ALLOW_CREDENTIALS = True
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    'http://192.168.56.1:3000'
+    "http://localhost:5173",
+    'http://192.168.56.1:5173'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'http://localhost:3000',
-    'http://192.168.56.1:3000'
+    'http://localhost:5173',
+    'http://192.168.56.1:5173'
 ]
 
 ROOT_URLCONF = 'grocery_store.urls'
